@@ -83,9 +83,10 @@ img {
     margin-left: auto;
   }
   &.inline {
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
   }
   &.inline-image {
   height: 10%;
