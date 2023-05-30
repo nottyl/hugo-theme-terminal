@@ -4,8 +4,9 @@
       {{ . }}
     </div>
   {{ end }}
+
   <div class="posts">
-    {{ range .Paginator.Pages }}
+   {{ range .Paginator.Pages }}
       <article class="post on-list">
         <h1 class="post-title">
           <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
@@ -17,7 +18,14 @@
             </time>
           {{ end }}
           {{ with .Params.Author }}
-            <span class="post-author">{{ . }}</span>
+            <span class="post-author">{{ . }} :: </span>
+          {{ end }}
+          {{ with .Params.categories }}
+            <span class="post-categories">
+            {{ range . }}
+              [<a href="{{ (urlize (printf "categories/%s/" .)) | absLangURL }}">{{ . }}</a>]&nbsp;
+            {{ end }}
+            </span>
           {{ end }}
         </div>
 
