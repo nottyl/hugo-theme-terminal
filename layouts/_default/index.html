@@ -27,7 +27,14 @@
             </time>
           {{ end }}
           {{ with .Params.Author }}
-            <span class="post-author">{{ . }}</span>
+            <span class="post-author">{{ . }} :: </span>
+          {{ end }}
+          {{ with .Params.categories }}
+            <span class="post-categories">
+            {{ range . }}
+              [<a href="{{ (urlize (printf "categories/%s/" .)) | absLangURL }}">{{ . }}</a>]&nbsp;
+            {{ end }}
+            </span>
           {{ end }}
         </div>
 
