@@ -79,7 +79,18 @@ img {
   }
 
   &.right {
+    float: right;
     margin-left: auto;
+  }
+  &.inline {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  &.inline-image {
+  height: 10%;
+  width: 10%;
+  /* Add any additional styling for the images */
   }
 }
 
