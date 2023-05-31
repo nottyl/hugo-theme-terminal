@@ -18,6 +18,7 @@
 .framed-toc {
   border: 2px solid $accent;
   background: transparentize($accent, 0.9);
+  background-color: transparentize($accent, 0.9);
   padding: 20px;
 
   *:first-child {
