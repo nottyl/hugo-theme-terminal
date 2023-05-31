@@ -3,7 +3,7 @@
 }
 
 .framed {
-  border: 1px solid $accent;
+  border: 2px solid $accent;
   padding: 20px;
 
   *:first-child {
@@ -13,6 +13,21 @@
   *:last-child {
     margin-bottom: 0;
   }
+}
+
+.framed-toc {
+  border: 2px solid $accent;
+  background: transparentize($accent, 0.9);
+  padding: 20px;
+
+  *:first-child {
+    margin-top: 0;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+
 }
 
 .posts {
