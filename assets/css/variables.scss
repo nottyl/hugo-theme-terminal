@@ -2,8 +2,8 @@
 body.light-theme, :root {
   /* light theme color */
   --accent: $accent;
-  --background: #f5f7fa;
-  --color: #585c66;
+  --background: #f0f0f0;
+  --color: #363a45;
   --border-color: rgba(0,0,0,.1);
 /* variables for js, must be the same as these in @custom-media queries */
 :root {
@@ -25,8 +25,8 @@ body.dark-theme {
   body:not(.dark-theme) {
     /* light theme color */
     --accent: $accent;
-    --background:#f5f7fa;
-    --color: #585c66;
+    --background:#f0f0f0;
+    --color: #363a45;
     --border-color: rgba(0,0,0,.1);
   }
 }
