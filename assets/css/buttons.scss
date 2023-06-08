@@ -18,7 +18,7 @@ a.button {
   border-radius: 8;
   border: 1px solid $accent;
   background: $accent;
-  color: $background;
+  color: var(--background);
   font: inherit;
   font-weight: bold;
   appearance: none;

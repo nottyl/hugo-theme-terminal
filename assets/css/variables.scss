@@ -1,9 +1,9 @@
 body.light-theme, :root {
   /* light theme color */
-  --accent: $accent-dark;
-  --background: mix(var(--accent) #d3d9e3, 10%);
-  --color: #414a5c;
-  --border-color: rgba(200,200,200,1);
+  --accent: $accent;
+  --background: #f5f7fa;
+  --color: #585c66;
+  --border-color: rgba(0,0,0,.1);
 
   /* variables for js, must be the same as these in @custom-media queries */
 
@@ -14,7 +14,7 @@ body.light-theme, :root {
 body.dark-theme {
   /* dark theme colors */
   --accent: $accent;
-  --background: mix(var(--accent), #242933, 2%);
+  --background: #242933;
   --color: #cdd3e3;
   --border-color: rgba(255,255,255,.1);
 }
@@ -22,10 +22,10 @@ body.dark-theme {
 @media (prefers-color-scheme: light) {
   body:not(.dark-theme) {
     /* light theme color */
-    --accent: $accent-dark;
-    --background: mix(var(--accent), #d3d9e3, 2%);
-    --color: #414a5c;
-    --border-color: rgba(200,200,200,1);
+    --accent: $accent;
+    --background:#f5f7fa;
+    --color: #585c66;
+    --border-color: rgba(0,0,0,.1);
   }
 }
 
@@ -36,7 +36,7 @@ body.dark-theme {
   body:not(.light-theme) {
     /* dark theme colors */
   --accent: $accent;
-  --background: mix(var(--accent), #242933, 2%);
+  --background: #242933;
   --color: #cdd3e3;
   --border-color: rgba(255,255,255,.1);
   }
