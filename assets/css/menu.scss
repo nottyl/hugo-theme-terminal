@@ -1,10 +1,10 @@
 @mixin menu {
   display: none;
   flex-direction: column;
-  $shadow-color: transparentize($background, .2);
+  $shadow-color: rgba(var(--background), .8);
   $shadow: 0 10px $shadow-color, -10px 10px $shadow-color, 10px 10px $shadow-color;
   position: absolute;
-  background: $background;
+  background: var(--background);
   box-shadow: $shadow;
   color: white;
   border: 2px solid;
@@ -17,7 +17,7 @@
 }
 
 @mixin header-menu-trigger {
-  color: $accent;
+  color: var(--accent);
   border: 2px solid;
   margin-left: 10px;
   height: 100%;

@@ -15,8 +15,8 @@ body {
   font-size: 1rem;
   line-height: 1.54;
   letter-spacing: -0.02em;
-  background-color: $background;
-  color: $color;
+  background-color: var(--background);
+  color: var(--color);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-feature-settings: "liga", "tnum", "zero", "ss01", "locl";
@@ -121,8 +121,8 @@ figure {
     font-size: 14px;
     padding: 5px 10px;
     margin-top: 5px;
-    background: $accent;
-    color: $background;
+    background: var(--accent);
+    color: var(--background);
     /* opacity: .8; */
 
     &.left {
@@ -142,8 +142,8 @@ figure {
 code, kbd {
   font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace !important;
   font-feature-settings: normal;
-  background: transparentize($accent, .8);
-  color: $accent;
+  background: rgba(var(--accent), .2);
+  color: var(--accent);
   padding: 1px 6px;
   margin: 0 2px;
   font-size: .95rem;
@@ -302,8 +302,8 @@ ol {
 }
 
 mark {
-  background: $accent;
-  color: $background;
+  background: var(--accent);
+  color: var(--background);
 }
 
 .container {
@@ -345,7 +345,7 @@ mark {
 hr {
   width: 100%;
   border: none;
-  background: $border-color;
+  background: var(--border-color);
   height: 1px;
 }
 

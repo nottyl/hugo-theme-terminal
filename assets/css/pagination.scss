@@ -12,19 +12,21 @@
     margin: 100px 0 20px;
 
     &-h {
+      /* transparentize and rgba transparency values are reversed*/
       text-align: center;
       margin: 0 auto;
       padding: 5px 10px;
-      background: $background;
-      color: transparentize($color, .7);
+      background: var(--background);
+      color: var(--border-color);
       font-size: .8rem;
       text-transform: uppercase;
       text-decoration: none;
       letter-spacing: .1em;
-      z-index: 1;
+      z-index: 10;
     }
 
     hr {
+      /* the divide line */
       position: absolute;
       left: 0;
       right: 0;
