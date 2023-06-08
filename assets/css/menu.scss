@@ -6,7 +6,7 @@
   position: absolute;
   background: var(--background);
   box-shadow: $shadow;
-  color: white;
+  color: var(--color);
   border: 2px solid;
   margin: 0;
   padding: 10px;
@@ -17,7 +17,7 @@
 }
 
 @mixin header-menu-trigger {
-  color: var(--accent);
+  color: $accent;
   border: 2px solid;
   margin-left: 10px;
   height: 100%;
