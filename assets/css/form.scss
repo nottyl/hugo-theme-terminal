@@ -1,7 +1,7 @@
 input, textarea, select {
   background: transparent;
   color: var(--accent);
-  border: 1px solid var(-accent);
+  border: 1px solid var(--accent);
   border-radius: 0;
   padding: 10px;
   font: inherit;
@@ -26,5 +26,5 @@ select {
 }
 
 ::placeholder {
-  color: rgba(var(--accent), .5);
+  color: rgba(var(--accent-rgb), .5);
 }

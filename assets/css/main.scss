@@ -61,7 +61,7 @@ a {
 
   /* Waiting for a better times... */
   /* &:has(code) {
-    text-decoration-color: $accent;
+    text-decoration-color: var(--accent);
   } */
 }
 
@@ -142,7 +142,7 @@ figure {
 code, kbd {
   font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace !important;
   font-feature-settings: normal;
-  background: rgba(var(--accent), .2);
+  background: rgba(var(--accent-rgb), .2);
   color: var(--accent);
   padding: 1px 6px;
   margin: 0 2px;
@@ -184,8 +184,8 @@ pre {
 }
 
 blockquote {
-  border-top: 1px solid $accent;
-  border-bottom: 1px solid $accent;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
   margin: 40px 0;
   padding: 25px;
 
@@ -210,15 +210,15 @@ blockquote {
     display: block;
     position: absolute;
     left: -25px;
-    color: $accent;
+    color: var(--accent);
   }
 
   &.twitter-tweet {
     position: relative;
-    background: transparentize($accent, .9);
+    background: rgba(var(--accent-rgb), .1);
     font: inherit;
     color: inherit;
-    border: 1px solid $accent;
+    border: 1px solid var(--accent);
     padding-top: 60px;
 
     p:before {
@@ -229,12 +229,12 @@ blockquote {
       content: '> From Twitter:';
       position: absolute;
       top: 20px;
-      color: $accent;
+      color: var(--accent);
       font-weight: bold;
     }
 
     a {
-      color: $accent;
+      color: var(--accent);
     }
   }
 }
@@ -249,12 +249,12 @@ table {
 table,
 th,
 td {
-  border: 1px dashed $accent;
+  border: 1px dashed var(--accent);
   padding: 10px;
 }
 
 th {
-  color: $accent;
+  color: var(--accent);
 }
 
 ul,
@@ -283,7 +283,7 @@ ol {
     content: counter(li);
     position: absolute;
     right: calc(100% + 10px);
-    color: $accent;
+    color: var(--accent);
     display: inline-block;
     text-align: right;
   }

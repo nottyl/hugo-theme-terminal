@@ -3,7 +3,7 @@
 }
 
 .framed {
-  border: 2px solid $accent;
+  border: 2px solid var(--accent);
   padding: 20px;
 
   *:first-child {
@@ -16,9 +16,9 @@
 }
 
 .framed-toc {
-  border: 2px solid $accent;
-  background: rgba($accent, .1);
-  background-color: rgba($accent, .1);
+  border: 2px solid var(--accent);
+  background: rgba(var(--accent-rgb), .1);
+  background-color: rgba(var(--accent-rgb), .1);
   padding: 20px;
 
   *:first-child {
@@ -48,13 +48,13 @@
   &-meta {
     font-size: 1rem;
     margin-bottom: 10px;
-    color:  rgba($accent, .7);
+    color:  rgba(var(--accent-rgb), .7);
   }
 
   &-title {
-    $border: 3px dotted $accent;
+    $border: 3px dotted var(--accent);
     position: relative;
-    color: $accent;
+    color: var(--accent);
     margin: 0 0 15px;
     padding-bottom: 15px;
     border-bottom: $border;
@@ -89,7 +89,7 @@
   }
 
   &-cover {
-    border: 20px solid $accent;
+    border: 20px solid var(--accent);
     background: transparent;
     margin: 40px 0;
     padding: 20px;
@@ -107,7 +107,7 @@
       content: '-';
       position: absolute;
       left: -20px;
-      color: $accent;
+      color: var(--accent);
     }
   }
 }
@@ -129,7 +129,7 @@
 }
 
 .hanchor {
-  color: rgba($accent, 0.9);
+  color: rgba(var(--accent-rgb), 0.9);
   text-decoration: none;
   margin-left: 10px;
   visibility: hidden;
@@ -140,5 +140,5 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a {
 }
 
 .footnotes {
-  color: rgba(var(--color), 0.5);
+  color: rgba(var(--color-rgb), 0.5);
 }
