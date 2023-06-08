@@ -1,14 +1,43 @@
-/* COLOR VARIABLES */
-$background: mix($accent, #242933, 2%);
-$color: #cdd3e3;
-$border-color: rgba(255, 255, 255, .1);
+body.light-theme, :root {
+  /* light theme color */
+  --accent: $accent-dark;
+  --background: mix(var(--accent) #d3d9e3, 10%);
+  --color: #414a5c;
+  --border-color: rgba(200,200,200,1);
 
-/* MEDIA QUERIES */
-$phone: "max-width: 684px";
-$tablet: "max-width: 900px";
+  /* variables for js, must be the same as these in @custom-media queries */
 
-/* variables for js, must be the same as these in @custom-media queries */
-:root {
   --phoneWidth: (max-width: 684px);
   --tabletWidth: (max-width: 900px);
+}
+
+body.dark-theme {
+  /* dark theme colors */
+  --accent: $accent;
+  --background: mix(var(--accent), #242933, 2%);
+  --color: #cdd3e3;
+  --border-color: rgba(255,255,255,.1);
+}
+
+@media (prefers-color-scheme: light) {
+  body:not(.dark-theme) {
+    /* light theme color */
+    --accent: $accent-dark;
+    --background: mix(var(--accent), #d3d9e3, 2%);
+    --color: #414a5c;
+    --border-color: rgba(200,200,200,1);
+  }
+}
+
+  $phone: "max-width: 684px";
+  $tablet: "max-width: 900px";
+
+@media (prefers-color-scheme: dark) {
+  body:not(.light-theme) {
+    /* dark theme colors */
+  --accent: $accent;
+  --background: mix(var(--accent), #242933, 2%);
+  --color: #cdd3e3;
+  --border-color: rgba(255,255,255,.1);
+  }
 }
