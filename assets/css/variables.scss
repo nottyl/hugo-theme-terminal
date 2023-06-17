@@ -8,6 +8,7 @@ body.light-theme, :root {
   --color: #363a45;
   --color-rgb: 54, 58, 69;
   --border-color: rgba(0,0,0,.1);
+
 /* variables for js, must be the same as these in @custom-media queries */
 :root {
   --phoneWidth: (max-width: 684px);
@@ -18,7 +19,7 @@ body.light-theme, :root {
 
 body.dark-theme {
   /* dark theme colors */
-  --accent: #87a0be;
+  --accent: #8ea8bf;
   --accent-rgb: 135, 160, 190;
   --background: #242933;
   --background-rgb: 36, 41, 51;
@@ -46,7 +47,7 @@ body.dark-theme {
 @media (prefers-color-scheme: dark) {
   body:not(.light-theme) {
     /* dark theme colors */
-  --accent: #87a0be;
+  --accent: #8ea8bf;
   --accent-rgb: 135, 160, 190;
   --background: #242933;
   --background-rgb: 36, 41, 51;

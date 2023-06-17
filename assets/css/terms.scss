@@ -1,9 +1,40 @@
 .terms {
-  h1 {
-    color: var(--accent);
-  }
+    h1 {
+        color: var(--accent);
+        $border: 3px dotted var(--accent);
+        position: relative;
+        border-bottom: $border;
+        margin: 0 0 15px;
+        padding-bottom: 15px;
+        border-bottom: $border;
 
+            &:after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      display: block;
+      width: 100%;
+      border-bottom: $border;
+    }
+    }
   h3 {
     font-size: initial;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      a {
+        color: var(--color);
+      }
+    }
+
+    li:not(:empty):before {
+      content: '-';
+      position: absolute;
+      left: -20px;
+      color: var(--color);
+    }
   }
 }

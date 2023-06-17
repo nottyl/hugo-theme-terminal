@@ -1,7 +1,3 @@
 {{ if .Get "src" }}
-  {{ $link := .Get "link" }}
-  <a href="{{ $link }}">
-  <img src="{{ .Get "src" | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} class="{{ with .Get "position"}}{{ . }}{{ else -}} left {{- end }}" {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }} {{ with .Get "height" }} height="{{ . }}" {{ end }}
-    {{ with .Get "width" }} width="{{ . }}" {{ end }}/>
-  </a>
+<img src="{{ .Get "src" | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} class="{{ with .Get "position"}}{{ . }}{{ else -}} left {{- end }}" {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }} {{ with .Get "width" }} width="{{ . | plainify }}" {{ end }} {{ with .Get "height" }} height="{{ . | plainify }}" {{ end }} />
 {{ end }}

@@ -275,27 +275,27 @@ ol {
   list-style: none;
   counter-reset: li;
 
-  li {
+  > li {
     counter-increment: li;
-  }
 
-  li:before {
-    content: counter(li);
-    position: absolute;
-    right: calc(100% + 10px);
-    color: var(--accent);
-    display: inline-block;
-    text-align: right;
-  }
+    &:before {
+        content: counter(li);
+        position: absolute;
+        right: calc(100% + 10px);
+        color: var(--accent);
+        display: inline-block;
+        text-align: right;
+    }
+}
 
-  ol {
-    margin-left: 38px;
+  > ol {
+        margin-left: 38px;
 
-    li {
-      counter-increment: li;
+    > li {
+        counter-increment: li;
     }
 
-    li:before {
+    &:before {
       content: counters(li, ".") " ";
     }
   }
