@@ -11,14 +11,15 @@
   }
 
   input[type="checkbox"]:checked {
-    ~ pre,
-    ~ .code-toolbar pre {
+
+    ~pre,
+    ~.code-toolbar pre {
       height: 0;
       padding: 0;
       border-top: none;
     }
 
-    ~ .code-toolbar {
+    ~.code-toolbar {
       padding: 0;
       border-top: none;
 
@@ -27,7 +28,7 @@
       }
     }
 
-    ~ label .collapsable-code__toggle:after {
+    ~label .collapsable-code__toggle:after {
       content: attr(data-label-expand);
     }
   }

@@ -1,5 +1,5 @@
-
-body.light-theme, :root {
+body.light-theme,
+:root {
   /* light theme color */
   --accent: #647991;
   --accent-rgb: 100, 121, 145;
@@ -7,13 +7,13 @@ body.light-theme, :root {
   --background-rgb: 240, 240, 240;
   --color: #363a45;
   --color-rgb: 54, 58, 69;
-  --border-color: rgba(0,0,0,.1);
+  --border-color: rgba(0, 0, 0, .1);
 
-/* variables for js, must be the same as these in @custom-media queries */
-:root {
-  --phoneWidth: (max-width: 684px);
-  --tabletWidth: (max-width: 900px);
-}
+  /* variables for js, must be the same as these in @custom-media queries */
+  :root {
+    --phoneWidth: (max-width: 684px);
+    --tabletWidth: (max-width: 900px);
+  }
 }
 
 
@@ -25,7 +25,7 @@ body.dark-theme {
   --background-rgb: 36, 41, 51;
   --color: #cdd3e3;
   --color-rgb: 205, 211, 227;
-  --border-color: rgba(255,255,255,.1);
+  --border-color: rgba(255, 255, 255, .1);
 }
 
 @media (prefers-color-scheme: light) {
@@ -33,27 +33,26 @@ body.dark-theme {
     /* light theme color */
     --accent: #647991;
     --accent-rgb: 100, 121, 145;
-    --background:#f0f0f0;
+    --background: #f0f0f0;
     --background-rgb: 240, 240, 240;
     --color: #363a45;
     --color-rgb: 54, 58, 69;
-    --border-color: rgba(0,0,0,.1);
+    --border-color: rgba(0, 0, 0, .1);
   }
 }
 
-  $phone: "max-width: 684px";
-  $tablet: "max-width: 900px";
+$phone: "max-width: 684px";
+$tablet: "max-width: 900px";
 
 @media (prefers-color-scheme: dark) {
   body:not(.light-theme) {
     /* dark theme colors */
-  --accent: #8ea8bf;
-  --accent-rgb: 135, 160, 190;
-  --background: #242933;
-  --background-rgb: 36, 41, 51;
-  --color: #cdd3e3;
-  --color-rgb: 205, 211, 227;
-  --border-color: rgba(255,255,255,.1);
+    --accent: #8ea8bf;
+    --accent-rgb: 135, 160, 190;
+    --background: #242933;
+    --background-rgb: 36, 41, 51;
+    --color: #cdd3e3;
+    --color-rgb: 205, 211, 227;
+    --border-color: rgba(255, 255, 255, .1);
   }
 }
-

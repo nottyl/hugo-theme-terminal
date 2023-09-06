@@ -1,14 +1,14 @@
 .terms {
-    h1 {
-        color: var(--accent);
-        $border: 3px dotted var(--accent);
-        position: relative;
-        border-bottom: $border;
-        margin: 0 0 15px;
-        padding-bottom: 15px;
-        border-bottom: $border;
+  h1 {
+    color: var(--accent);
+    $border: 3px dotted var(--accent);
+    position: relative;
+    border-bottom: $border;
+    margin: 0 0 15px;
+    padding-bottom: 15px;
+    border-bottom: $border;
 
-            &:after {
+    &:after {
       content: '';
       position: absolute;
       bottom: 2px;
@@ -16,7 +16,8 @@
       width: 100%;
       border-bottom: $border;
     }
-    }
+  }
+
   h3 {
     font-size: initial;
   }

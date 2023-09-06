@@ -1,3 +1,11 @@
 {{ if .Get "src" }}
-<img src="{{ .Get "src" | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} class="{{ with .Get "position"}}{{ . }}{{ else -}} left {{- end }}" {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }} {{ with .Get "width" }} width="{{ . | plainify }}" {{ end }} {{ with .Get "height" }} height="{{ . | plainify }}" {{ end }} />
+  {{ $link := .Get "link" }}
+  <a href="{{ $link }}">
+  <img src="{{ .Get "src" | safeURL }}" 
+    {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }}
+     class="{{ with .Get "position" }}{{ . }}{{ else }}left{{ end }} {{ if eq (.Get "position") "right" }}image-wrapper{{ end }} {{ if in (slice "true" "yes") (.Get "inline") }}inline-image{{ end }}"
+     {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }}
+    {{ with .Get "height" }} height="{{ . }}" {{ end }}
+    {{ with .Get "width" }} width="{{ . }}" {{ end }}/>
+  </a>
 {{ end }}

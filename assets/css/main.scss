@@ -30,6 +30,7 @@ body {
 }
 
 .headings--one-size {
+
   h1,
   h2,
   h3,
@@ -82,16 +83,18 @@ img {
     float: right;
     margin-left: auto;
   }
+
   &.inline {
     display: -webkit-inline-flex;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
   }
+
   &.inline-image {
-  height: 10%;
-  width: 10%;
-  /* Add any additional styling for the images */
+    height: 10%;
+    width: 10%;
+    /* Add any additional styling for the images */
   }
 }
 
@@ -139,7 +142,8 @@ figure {
   }
 }
 
-code, kbd {
+code,
+kbd {
   font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace !important;
   font-feature-settings: normal;
   background: rgba(var(--accent-rgb), .2);
@@ -148,7 +152,8 @@ code, kbd {
   margin: 0 2px;
   font-size: .95rem;
 
-  code, kbd {
+  code,
+  kbd {
     background: transparent;
     padding: 0;
     margin: 0;
@@ -164,7 +169,7 @@ pre {
   border-top: 1px solid rgba(255, 255, 255, .1);
   border-bottom: 1px solid rgba(255, 255, 255, .1);
 
-  + pre {
+  +pre {
     border-top: 0;
     margin-top: -40px;
   }
@@ -275,24 +280,24 @@ ol {
   list-style: none;
   counter-reset: li;
 
-  > li {
+  >li {
     counter-increment: li;
 
     &:before {
-        content: counter(li);
-        position: absolute;
-        right: calc(100% + 10px);
-        color: var(--accent);
-        display: inline-block;
-        text-align: right;
+      content: counter(li);
+      position: absolute;
+      right: calc(100% + 10px);
+      color: var(--accent);
+      display: inline-block;
+      text-align: right;
     }
-}
+  }
 
-  > ol {
-        margin-left: 38px;
+  >ol {
+    margin-left: 38px;
 
-    > li {
-        counter-increment: li;
+    >li {
+      counter-increment: li;
     }
 
     &:before {
@@ -354,5 +359,5 @@ hr {
 }
 
 sup {
- line-height: 0;
+  line-height: 0;
 }
